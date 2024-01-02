@@ -1,11 +1,18 @@
 
-async function fetchdata(da) {
-    fs.readFile("readme.txt", "utf-8", function (err, data) {
-        da(data)
-    })
-}
-function ondone(ok) {
-    console.log(ok)
-}
+function jimmy() {
+    return new Promise(function (resolve) {
 
-fetchdata(ondone)
+        for (let i = 0; i < 30; i++) {
+
+            setTimeout(function () {
+                resolve(i)
+            }, 1000)
+        }
+
+    })
+
+}
+const value = jimmy();
+value.then(function (data) {
+    console.log(data)
+})
