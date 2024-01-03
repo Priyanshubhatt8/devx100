@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express();
-const port = 6000;
+const port = 9000;
 
 
-app.post('/', function (req, res) {
+app.get('/', function (req, res) {
 
     res.send("hello world")
 })
