@@ -62,7 +62,7 @@ Compiled languages
 3 example - cpp, java ,rust ,golang 
 
 
-interpreted lamguages
+interpreted languages
 1 usually go line by line 
 2 can run partially if the error comes later 
 3 example javascript, python 
@@ -74,14 +74,14 @@ browsers can only understand Html/css/javascript(Not technically true)we can use
 thanks to node js ,javascript can also be used for "backend development"
 =======================================================================================================================================================================================
 
-4- Static vs dynamix lamguages?
+4- Static vs dynamic lamguages?
 
 cpp
 #include<iostream>
 using namespace std;
 int main(){
     int number=5; //here we have assigned number to a variable 
-    number="hello";//but here we are assigned that variable a string so it will give error because it is static type language
+    number="hello";//but here we are assigning that variable a string so it will give error because it is static type language
     cout<<number;
     return 0;
 }
@@ -197,6 +197,7 @@ person.firstName = "John"; |
 person.lastName = "Doe";   |
 person.age = 50;           |
 person.eyeColor = "blue";  |
+                           |      
 ============================
 
 3rd way
@@ -307,7 +308,7 @@ here we have a function sum and inside that function we have parameter num1 and 
 
 and we have another function which is displayresult and inside that we have parameter data 
 
-and we are calling sum(1,4,displayresult) so what will happen here when we call sum 1 will go to num1 and 2 4 will go to num2 and displayresult which is a function will also 
+and we are calling sum(1,4,displayresult) so what will happen here when we call sum 1 will go to num1 and  4 will go to num2 and displayresult which is a function will also 
 be passed as a argument in sum funciton so this is callback function we are passing a function inside a function and it will print result of 1 and 3
 
 example
@@ -333,7 +334,7 @@ funciton greet(){
   console.log("hi guys welcome ");
 }
 setTimeout is a function which is provided by javascript like setTimeout(greet,1000);
-so what will happen here our greet function which is passout to setTimeout function as an argument what will happen our function will run after 1second we can also increase the time 
+so what will happen here our greet function which is passout to setTimeout function as an argument what will happen our function will run after 1 second we can also increase the time 
 so we are passing function as an argument into settimeout function so this is callback 
 
 in setInterval function it prints everytime after 1 seconds

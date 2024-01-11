@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // function populated() {
+
+    //     const a = document.getElementById('Firstnumber').value;
+    //     const b = document.getElementById('Secondnumber').value;
+    //     // const data = document.getElementById('sum')
+    //     // data.innerHTML = parseInt(a) + parseInt(b)
+    //     // const data = document.getElementById('sum')
+    //     fetch("http://localhost:1320/?a=" + a + "&b=" + b).then(function (response) {
+    //         console.log(response)
+    //         response.text().then((ans) => {
+
+    //             document.getElementById('sum').innerHTML = ans
+    //         })
+    //     })
+    // }
+
+
+    async function populated() {
+
+        const a = document.getElementById('Firstnumber').value;
+        const b = document.getElementById('Secondnumber').value;
+
+        const response = await fetch("http://localhost:1320/?a=" + a + "&b=" + b);
+        const ans = await response.text();
+        document.getElementById('sum').innerHTML = ans
+
+    }
+</script>
+
+<body>
+
+
+    <input id="Firstnumber" type="text" placeholder="First number"><br><br>
+    <input id="Secondnumber" type="text" placeholder="second number"><br><br>
+    <button onclick="populated()">Click me</button><br><br>
+
+    <div id="sum"></div>
+
+
+
+
+</body>
+
+</html>

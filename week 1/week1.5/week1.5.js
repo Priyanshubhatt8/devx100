@@ -173,27 +173,25 @@
 
 
 
-// function jimmy() {
-//     return new Promise(function (resolve) {
+function jimmy() {
+    return new Promise(function (resolve) {
 
-//         for (let i = 0; i < 30; i++) {
-
-//             setTimeout(function () {
-//                 resolve(i)
-//             }, 1000)
-//         }
-
-//     })
-
-// }
-// const value = jimmy();
-// value.then(function (data) {
-//     console.log(data)
-// })
+        for (let i = 0; i < 30; i++) {
+           
+         console.log(i);
+         resolve()
 
 
+        }
+       
 
+    })
 
+}
+const value = jimmy();
+value.then(function (data) {
+    console.log(data)
+})
 
 
 
@@ -205,23 +203,27 @@
 
 
 
-/*
+
+
+
+
+
 // Lets introduce an asynchronous function (setTimeout)
 
-function findSum(n) {
-    let ans = 0;
-    for (let i = 0; i<n; i++) {
-      ans += i;
-    }
-    return ans;
-  }
+// function findSum(n) {
+//     let ans = 0;
+//     for (let i = 0; i<n; i++) {
+//       ans += i;
+//     }
+//     return ans;
+//   }
   
-  function findSumTill100() {
-    return findSum(100);
-  }
+//   function findSumTill100() {
+//     return findSum(100);
+//   }
   
-  setTimeout(findSumTill100, 1000)
-  console.log("hello world");
+//   setTimeout(findSumTill100, 1000)
+//   console.log("hello world");
 
 //   What are common async functions? 
 // setTimeout 
@@ -234,7 +236,6 @@ function findSum(n) {
 //   console.log(data);
 // });
 
-*/
 
 
 /*
@@ -330,20 +331,23 @@ console.log("hiiii")
 */
 
 //Async await
-function kiratsAsyncFunction() {
-    let p = new Promise(function(resolve) {
-      // do some async logic here
-      resolve("hi there!")
-    });
-    return p;
-  }
+// function kiratsAsyncFunction() {
+  //   let p = new Promise(function(resolve) {
+  //     // do some async logic here
+  //     for(let i=0;i<10;i++){
+  //       console.log(i)
+  //     }
+  //     resolve("hi there!")
+  //   });
+  //   return p;
+  // }
   
-  async function main() {
-    const value = await kiratsAsyncFunction();
-    console.log(value);
-  }
+  // async function main() {
+  //   const value = await kiratsAsyncFunction();
+  //   console.log(value);
+  // }
   
-  main();
+  // main();
   
   // Aynsc await syntax 
   // Again, it is just syntactic sugar. Still uses callbacks/Promises under the hood 

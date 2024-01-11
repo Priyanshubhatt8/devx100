@@ -6,12 +6,12 @@
 // console.log(a);
 
 // let firstname = "priyanshu";
-// let age = 18;
-// let ismarried = false;
+// let age = 18;;
 // console.log("this person name is " + firstname + "and their age is " + age + "and priyanshu is marries?" + ismarried);
 
 // let age = 18;
 // let married = false;
+// let ismarried = false
 // let name = "priyanshu ";
 
 
