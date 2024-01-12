@@ -19,7 +19,7 @@ Here are some examples:
 ```jsx
 // Example using the Node.js fs module for file system operations
 const fs = require("fs");
-fs.readFile("file.txt", "utf8", (err, data) => {
+fs.readFile("file.txt", "utf-8", (err, data) => {
   if (err) {
     console.error(err);
     return;

@@ -22,8 +22,15 @@
     //         })
     //     })
     // }
+    let timeout;
 
+    function debouncepopulated() {
+        clearTimeout(timeout)
 
+        timeout = setTimeout(function () {
+            populated()
+        }, 1000);
+    }
     async function populated() {
 
         const a = document.getElementById('Firstnumber').value;
@@ -39,9 +46,9 @@
 <body>
 
 
-    <input id="Firstnumber" type="text" placeholder="First number"><br><br>
-    <input id="Secondnumber" type="text" placeholder="second number"><br><br>
-    <button onclick="populated()">Click me</button><br><br>
+    <input oninput="debouncepopulated()" id="Firstnumber" type="text" placeholder="First number"><br><br>
+    <input oninput="debouncepopulated()" id="Secondnumber" type="text" placeholder="second number"><br><br>
+    <!-- <button onclick="populated()">Click me</button><br><br> -->
 
     <div id="sum"></div>
 
