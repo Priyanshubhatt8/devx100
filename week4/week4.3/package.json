@@ -1,0 +1,16 @@
+{
+  "name": "week4.3",
+  "version": "1.0.0",
+  "description": "database is where we store data presistently databse can have any kind of data like video audio images numbers and more.\r browsers cant access database directly because they arent made like that there are some reasons that browsers cant access databse directly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
