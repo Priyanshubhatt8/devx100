@@ -1,30 +1,31 @@
 const mongoose = require('mongoose')
 
 mongoose.connect('mongodb+srv://priyanshub850:Poonambhatt%40850@cluster0.vgraacb.mongodb.net/');
-const username = "Priyanshu bhatt"
-const password = "7347"
 
+
+const AdminSchema = new mongoose.Schema({
+
+
+
+})
 
 const UserSchema = new mongoose.Schema({
-    username: String,
-    password: String
+
+
+})
+
+
+const CoursesSchema = new mongoose.Schema({
+
 
 })
 
 
 
-const newentry = mongoose.model('newentry', UserSchema)
-// newentry.create({
-//     username,
-//     password
-// })
+const Admin = mongoose.model('Admin', AdminSchema)
+
+const Users = mongoose.model('Users', UserSchema)
+
+const Courses = mongoose.model('Courses', CoursesSchema)
 
 
-
-
-// newentry.updateOne({ id: '65a42e20edcd7186063ffce3', $push: { age: "67" } })
-
-newentry.deleteMany({
-    username,
-    password
-})
