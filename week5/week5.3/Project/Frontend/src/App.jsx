@@ -1,7 +1,12 @@
+import { Createtodo } from "../components/Createtodo";
 import "./App.css";
 
 function App() {
-  return <div>Hi there</div>;
+  return (
+    <div>
+      <Createtodo></Createtodo>
+    </div>
+  );
 }
 
 export default App;
