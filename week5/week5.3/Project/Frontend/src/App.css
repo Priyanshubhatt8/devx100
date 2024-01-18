@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.MainTodoDiv {
+  padding-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
+
+  gap: 3px;
+}
+
+.TodoTitle {
+  text-align: center;
+  padding: 10px 60px;
+  margin-top: 40px;
+  border-radius: 8px;
+  border: 1px solid pink;
+}
+
+.Tododescription {
+  text-align: center;
+  padding: 10px 60px;
+  border-radius: 8px;
+  border: 1px solid pink;
+}
+
+.btn {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
+.created {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: aquamarine;
+}
+.bton {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-export function Createtodo() {
+<link rel="stylesheet" href="App.css" />;
+export function Createtodo(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -43,8 +43,16 @@ export function Createtodo() {
               },
             }).then(async function (res) {
               const json = await res.json();
-              alert("Todo added");
+              console.log("Todo added");
+              console.log(json);
             });
+            props.setTodos([
+              ...props.todos,
+              {
+                title,
+                description,
+              },
+            ]);
           }}
         >
           Add a Todo

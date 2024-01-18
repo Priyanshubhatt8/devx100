@@ -13,8 +13,8 @@ function App() {
 
   return (
     <div>
-      <Createtodo setTodos={setTodos}></Createtodo>
-      <Todos todos={todos}></Todos>
+      <Createtodo todos={todos} setTodos={setTodos}></Createtodo>
+      <Todos todos={todos} setTodos={setTodos}></Todos>
     </div>
   );
 }
