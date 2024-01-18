@@ -6,7 +6,9 @@ const { todo } = require("./db");
 const cors = require("cors")
 app.use(express.json());
 
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:5173"
+}))
 
 app.post('/todo', async (req, res) => {
 
@@ -18,13 +20,15 @@ app.post('/todo', async (req, res) => {
         res.status(411).json({
             msg: "You have sent the wrong input "
         })
+        await todo.create({
+            title: payload.title,
+            description: payload.description,
+            completed: false
+        })
         return;
     }
-    await todo.create({
-        title: payload.title,
-        description: payload.description,
-        completed: false
-    })
+
+
     res.json({
         msg: "toto created successfully"
     })
