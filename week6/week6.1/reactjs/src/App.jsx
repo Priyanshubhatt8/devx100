@@ -3,21 +3,21 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [title, setTitle] = useState("Priyanshu");
 
-  function increament() {
-    setCount(count + 1);
-  }
-  function Decreament() {
-    setCount(count - 1);
+  function Updatetitle() {
+    setTitle(`My name is  ${Math.random()}`);
   }
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={increament}>Increment</button>
-      <button onClick={Decreament}>Decreament</button>
+      <button onClick={Updatetitle}>Click to update details</button>
+      <Header title={title}></Header>
+      <Header title="Hi get out"></Header>
     </div>
   );
 }
 
+function Header({ title }) {
+  return <div>{title}</div>;
+}
 export default App;
