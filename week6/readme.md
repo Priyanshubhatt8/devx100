@@ -40,7 +40,7 @@ const MyComponent = () => {
 
 # Object Destructuring
 
-Object destructuring is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and convenient way. This can make your code cleaner and more readable. Here's a brief explanation with an example:
+Object destructuring is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and convenient way. This can make your code cleaner and more readable. Here's a brief explanation with an example:f
 
 ### Basic Object Destructuring:
 
