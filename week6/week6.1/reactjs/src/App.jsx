@@ -1,17 +1,20 @@
 // import { useState } from "react";
 import { useState } from "react";
-
+let counter = 4;
 function App() {
   const [todos, setTodos] = useState([
     {
+      id: 1,
       title: "Hello",
       description: "Not welcome",
     },
     {
+      id: 2,
       title: "You are wrong",
       description: "no you are not ",
     },
     {
+      id: 3,
       title: "What happend",
       description: "Thats not the problem here ",
     },
@@ -21,6 +24,7 @@ function App() {
     setTodos([
       ...todos,
       {
+        id: counter++,
         title: Math.random(),
         description: Math.random(),
       },
@@ -31,20 +35,25 @@ function App() {
       <br></br>
       <br></br>
       <button onClick={addTodo}>Add new todo</button>
-      {todos.map(function (todo) {
+      {todos.map((todo) => {
         return (
           <>
-            <Todo title={todo.title} description={todo.description}></Todo>
+            <Todo
+              key={todo.id}
+              title={todo.title}
+              description={todo.description}
+            ></Todo>
           </>
         );
       })}
-    </> 
+    </>
   );
 }
 
 function Todo({ title, description }) {
   return (
     <>
+      <p></p>
       <p>{title}</p>
       <p>{description}</p>
     </>
