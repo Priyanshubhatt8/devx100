@@ -1,90 +1,118 @@
-import { useEffect, useState } from "react";
-import React from "react";
+// import { useEffect, useState } from "react";
+// import React from "react";
 
-let counter = 4;
-function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: "Go to gym",
-      description: "After gym play valorant",
-    },
-    {
-      id: 2,
-      title: "Study now",
-      description: "After valorant study for 2 hours",
-    },
-    {
-      id: 3,
-      title: "Go to sleep",
-      description: "After study go to sleep at 10 pm",
-    },
-    {
-      id: 4,
-      title: "Wake up ",
-      description: "Wake up early",
-    },
-  ]);
+// function App() {
+//   return (
+//     <>
+//       <Cardwrapper innercomponent={<Newchild />}></Cardwrapper>
+//     </>
+//   );
 
-  function AddTodo() {
-    setTodos([
-      ...todos,
-      {
-        id: counter++,
-        title: title,
-        description: description,
-      },
-    ]);
-  }
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+//   function Newchild() {
+//     return (
+//       <>
+//         <h1>Hi there welcome back to my channel</h1>
+//       </>
+//     );
+//   }
 
-  return (
-    <div>
-      <input
-        type="text"
-        onChange={(e) => {
-          setTitle(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        onChange={(e) => {
-          setDescription(e.target.value);
-        }}
-      />
-      <button onClick={AddTodo}>Add new Todo</button>
+//   function Cardwrapper({ innercomponent }) {
+//     return (
+//       <>
+//         <h2 style={{ border: "2px solid green", padding: 20 }}>
+//           {innercomponent}
+//         </h2>
+//       </>
+//     );
+//   }
+// }
 
-      {todos.map((todo) => {
-        return (
-          <Todo
-            key={todo.id}
-            id={todo.id}
-            title={todo.title}
-            description={todo.description}
-          />
-        );
-      })}
-    </div>
-  );
-}
+// export default App;
 
-function Todo({ id, title, description }) {
-  return (
-    <div>
-      <h2>
-        {" "}
-        {id}:{title}
-      </h2>
-      <h3>
-        {" "}
-        {id}:{description}
-      </h3>
-    </div>
-  );
-}
+// let counter = 4;
+// function App() {
+//   const [todos, setTodos] = useState([
+//     {
+//       id: 1,
+//       title: "Go to gym",
+//       description: "After gym play valorant",
+//     },
+//     {
+//       id: 2,
+//       title: "Study now",
+//       description: "After valorant study for 2 hours",
+//     },
+//     {
+//       id: 3,
+//       title: "Go to sleep",
+//       description: "After study go to sleep at 10 pm",
+//     },
+//     {
+//       id: 4,
+//       title: "Wake up ",
+//       description: "Wake up early",
+//     },
+//   ]);
 
-export default App;
+//   function AddTodo() {
+//     setTodos([
+//       ...todos,
+//       {
+//         id: counter++,
+//         title: title,
+//         description: description,
+//       },
+//     ]);
+//   }
+//   const [title, setTitle] = useState("");
+//   const [description, setDescription] = useState("");
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         onChange={(e) => {
+//           setTitle(e.target.value);
+//         }}
+//       />
+//       <input
+//         type="text"
+//         onChange={(e) => {
+//           setDescription(e.target.value);
+//         }}
+//       />
+//       <button onClick={AddTodo}>Add new Todo</button>
+
+//       {todos.map((todo) => {
+//         return (
+//           <Todo
+//             key={todo.id}
+//             id={todo.id}
+//             title={todo.title}
+//             description={todo.description}
+//           />
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
+// function Todo({ id, title, description }) {
+//   return (
+//     <div>
+//       <h2>
+//         {" "}
+//         {id}:{title}
+//       </h2>
+//       <h3>
+//         {" "}
+//         {id}:{description}
+//       </h3>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // function App() {
 //   const [todos, setTodos] = useState([]);
@@ -100,13 +128,9 @@ export default App;
 
 //   return (
 //     <div>
-//       {todos.map((todo) => {
-//         <Todo
-//           key={todo.id}
-//           title={todo.title}
-//           description={todo.description}
-//         ></Todo>;
-//       })}
+//       {todos.map((todo) => (
+//         <Todo title={todo.title} description={todo.description} />
+//       ))}
 //     </div>
 //   );
 // }
