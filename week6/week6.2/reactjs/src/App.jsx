@@ -1,68 +1,113 @@
 import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 
 function App() {
-  const [todoid, SetTodoid] = useState(1);
+  const [count, SetCount] = useState(0);
+  const [sum, setSum] = useState(0);
+
+  let count1 = 0;
+  for (let i = 1; i <= sum.length; i++) {
+    count1 = count1 + i;
+  }
   return (
     <div>
+      <input
+        type="text"
+        onChange={(e) => {
+          setSum(e.target.value);
+        }}
+      />
+      <br></br>
+      <h3>
+        Sum is {sum}and sum is {count}{" "}
+      </h3>
+      <br />
+
       <button
-        onClick={function () {
-          SetTodoid(1);
+        onClick={() => {
+          SetCount(count + 1);
         }}
       >
-        1
+        Counter:{count}
       </button>
-      <button
-        onClick={function () {
-          SetTodoid(2);
-        }}
-      >
-        3
-      </button>
-      <button
-        onClick={function () {
-          SetTodoid(3);
-        }}
-      >
-        3
-      </button>
-      <button
-        onClick={function () {
-          SetTodoid(4);
-        }}
-      >
-        4
-      </button>
-      <button
-        onClick={function () {
-          SetTodoid(5);
-        }}
-      >
-        5
-      </button>
-      <Todo id={todoid}></Todo>
     </div>
   );
-
-  function Todo({ id }) {
-    const [todos, setTodos] = useState({});
-
-    useEffect(() => {
-      axios.get(`https://sum-server.100xdevs.com/todo?id=${id}`).then((res) => {
-        setTodos(res.data.todo);
-      });
-    }, [id]);
-    return (
-      <>
-        <div>
-          <h1>{todos.title}</h1>
-          <h2>{todos.description}</h2>
-        </div>
-      </>
-    );
-  }
 }
+
 export default App;
+
+// function App() {
+//   return (
+//     <div>
+//       <Todo></Todo>
+//       <h1>Hey akash</h1>
+//     </div>
+//   );
+// }
+
+// function Todo() {
+//   const [todos, setTodos] = useState({});
+//   const [todoid, SetTodoid] = useState(1);
+
+//   useEffect(() => {
+//     axios
+//       .get("https://sum-server.100xdevs.com/todo?id=" + todoid)
+//       .then((res) => {
+//         setTodos(res.data.todo);
+//       });
+//   }, [todoid]);
+
+//   return (
+//     <>
+//       <div>
+//         <h1>{todos.title}</h1>
+//         <h2>{todos.description}</h2>
+//       </div>
+//       <h1>Hi there</h1>;
+//       <button
+//         onClick={function () {
+//           SetTodoid(1);
+//         }}
+//       >
+//         1
+//       </button>
+//       <button
+//         onClick={function () {
+//           SetTodoid(2);
+//         }}
+//       >
+//         2
+//       </button>
+//       <button
+//         onClick={function () {
+//           SetTodoid(3);
+//         }}
+//       >
+//         3
+//       </button>
+//       <button
+//         onClick={function () {
+//           SetTodoid(4);
+//         }}
+//       >
+//         4
+//       </button>
+//       <button
+//         onClick={function () {
+//           SetTodoid(5);
+//         }}
+//       >
+//         5
+//       </button>
+//       <div>
+//         <h1>{todos.title}</h1>
+//         <h2>{todos.description}</h2>
+//       </div>
+//     </>
+//   );
+// }
+// export default App;
 
 // function App() {
 //   const [todos, setTodos] = useState([]);
