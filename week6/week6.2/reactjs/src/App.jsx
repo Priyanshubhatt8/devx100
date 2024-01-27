@@ -1,42 +1,85 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 
 import axios from "axios";
 
 function App() {
-  const [count, SetCount] = useState(0);
-  const [sum, setSum] = useState(0);
+  const [Counter, SetCount] = useState(0);
 
-  let count1 = 0;
-  for (let i = 1; i <= sum.length; i++) {
-    count1 = count1 + i;
-  }
+  // function a() {
+  //   console.log("Again rerender");
+  // }
+
+  var a = useCallback(() => {
+    console.log("not rendered");
+  }, []);
   return (
-    <div>
-      <input
-        type="text"
-        onChange={(e) => {
-          setSum(e.target.value);
-        }}
-      />
-      <br></br>
-      <h3>
-        Sum is {sum}and sum is {count}{" "}
-      </h3>
-      <br />
+    <>
+      <div>
+        <button
+          onClick={() => {
+            SetCount(Counter + 1);
+          }}
+        >
+          Counter {Counter}
+        </button>
 
-      <button
-        onClick={() => {
-          SetCount(count + 1);
-        }}
-      >
-        Counter:{count}
-      </button>
-    </div>
+        <Demo a={a}></Demo>
+      </div>
+    </>
   );
 }
 
+const Demo = memo(function Demo({ a }) {
+  return (
+    <div>
+      <h1>Hi there </h1>
+      {/* <h2>{a}</h2> */}
+    </div>
+  );
+});
 export default App;
 
+// const [sum, setSum] = useState(0);
+// const [value, setFinalvalue] = useState(0);
+
+// useEffect(() => {
+//   let count = 0;
+//   for (let i = 1; i <= sum; i++) {
+//     count = count + i;
+//   }
+//   setFinalvalue(count);
+// }, [sum]);
+
+// let Count = useMemo(() => {
+//   let finalCount = 0;
+//   for (let i = 1; i <= sum; i++) {
+//     finalCount = finalCount + i;
+//   }
+// return finalCount;
+// }, [sum]);
+// return (
+//   <div>
+//     <input
+//       type="text"
+//       onChange={(e) => {
+//         setSum(e.target.value);
+//       }}
+//     />
+//     <br></br>
+//     <h3>
+//       Input is {sum} and The Sum of {Count}{" "}
+//     </h3>
+//     <br />
+
+//     <button
+//       onClick={() => {
+//         SetCount(Counter + 1);
+//       }}
+//     >
+//       Counter:{Counter}
+//     </button>
+//   </div>
+// );
 // function App() {
 //   return (
 //     <div>
