@@ -2,42 +2,108 @@ import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 
 import axios from "axios";
 
-function App() {
-  const [Counter, SetCount] = useState(0);
+// function useTodos() {
+//   const [todos, setTodos] = useState([
+//     {
+//       id: 1,
+//       title: "Hi guys",
+//       description: "Not a problem i want to relocate as a same and all ",
+//     },
+//     {
+//       id: 2,
+//       title: "bye guys",
+//       description: "All over way as not possible ",
+//     },
+//     {
+//       id: 3,
+//       title: "alll best guys",
+//       description: "use to be so proud",
+//     },
+//   ]);
 
-  // function a() {
-  //   console.log("Again rerender");
-  // }
+//   return todos;
+// }
+// function App() {
+//   const todos = useTodos();
+//   return (
+//     <div>
+//       {todos.map((todo) => (
+//         <h1 key={todo.id}>
+//           {" "}
+//           {todo.title}
+//           {todo.description}
+//         </h1>
+//       ))}
+//     </div>
+//   );
+// }
+// export default App;
 
-  var a = useCallback(() => {
-    console.log("not rendered");
-  }, []);
-  return (
-    <>
-      <div>
-        <button
-          onClick={() => {
-            SetCount(Counter + 1);
-          }}
-        >
-          Counter {Counter}
-        </button>
+// function App() {
+//   const [counter, setCounter] = useState(0);
 
-        <Demo a={a}></Demo>
-      </div>
-    </>
-  );
-}
+//   const Buttons = useCallback(function Buttons() {
+//     console.log("Hi there");
+//   }, []);
+//   return (
+//     <div>
+//       <ChildComponent inputvalue={Buttons}></ChildComponent>
+//       <button
+//         onClick={() => {
+//           setCounter(counter + 1);
+//         }}
+//       >
+//         Counter{counter}
+//       </button>
+//     </div>
+//   );
+// }
+// const ChildComponent = memo(function ({ inputvalue }) {
+//   console.log("rendered");
+//   return (
+//     <div>
+//       <button onClick={inputvalue}>Click me</button>
+//     </div>
+//   );
+// });
+// export default App;
 
-const Demo = memo(function Demo({ a }) {
-  return (
-    <div>
-      <h1>Hi there </h1>
-      {/* <h2>{a}</h2> */}
-    </div>
-  );
-});
-export default App;
+// function App() {
+//   const [Counter, SetCount] = useState(0);
+
+//   // function a() {
+//   //   console.log("Again rerender");
+//   // }
+
+//   var a = useCallback(() => {
+//     console.log("not rendered");
+//   }, []);
+//   return (
+//     <>
+//       <div>
+//         <button
+//           onClick={() => {
+//             SetCount(Counter + 1);
+//           }}
+//         >
+//           Counter {Counter}
+//         </button>
+
+//         <Demo a={a}></Demo>
+//       </div>
+//     </>
+//   );
+// }
+
+// const Demo = memo(function Demo({ a }) {
+//   return (
+//     <div>
+//       <h1>Hi there </h1>
+//       {/* <h2>{a}</h2> */}
+//     </div>
+//   );
+// });
+// export default App;
 
 // const [sum, setSum] = useState(0);
 // const [value, setFinalvalue] = useState(0);
